@@ -1,7 +1,7 @@
 INC_DIR:= ./inc/ ./inc/net/ ./inc/threadpool/
 SRC_DIR:= ./src ./src/net ./src/threadpool
-SRCS:=$(wildcard ./src/*.cc) $(wildcard ./src/net/*.cc) $(wildcard ./src/net/*.c) $(wildcard ./src/threadpool/*.cc)
-OBJS:= $(patsubst %.cc, %.o, $(SRCS))
+SRCS:=$(wildcard ./src/*.cpp) $(wildcard ./src/net/*.cpp) $(wildcard ./src/net/*.cpp) $(wildcard ./src/threadpool/*.cpp)
+OBJS:= $(patsubst %.cpp, %.o, $(SRCS))
 LIBS:= -lpthread
 
 CXX:=g++
@@ -12,7 +12,7 @@ EXE:=./bin/main
 
 $(EXE):$(OBJS)
 	$(CXX) -o $(EXE) $(SRCS) $(CXXFLAGS)
-#$(SRC_DIR)/%.o:$(SRC_DIR)/%.cc
+#$(SRC_DIR)/%.o:$(SRC_DIR)/%.cpp
 	#$(CXX)  -c $^ -o $@ $(CXXFLAGS)
 
 clean:

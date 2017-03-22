@@ -27,7 +27,7 @@ unsigned short str2unshort(const string & str)
 namespace wd
 {
 
-SpellcorrectServer::SpellcorrectServer(const string & cfgFileName)
+SpellcorrectServer::SpellcorrectServer(const string & cfgFileName) //cfgfilename = "./conf/my.conf"
 : _conf(cfgFileName)
 , _tcpServer(_conf.getMap()["my_ip"].c_str(), str2unshort(_conf.getMap()["my_port"]))
 , _threadpool(4,1000)

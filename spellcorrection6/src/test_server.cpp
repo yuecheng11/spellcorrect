@@ -6,12 +6,12 @@
  
 #include "SpellcorrectServer.h"
 #include <iostream>
-
+using namespace wd;
 
 
 int main(void)
 {
-	wd::SpellcorrectServer server("./conf/my.conf");
+	SpellcorrectServer server("./conf/my.conf");
 	server.start();
 
 	return 0;
